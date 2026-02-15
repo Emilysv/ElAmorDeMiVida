@@ -1,5 +1,7 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
          <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
         <title>
             <!--Emily Vides - first personal project
@@ -7,12 +9,14 @@
         </title>
         <style type = "text/css">
             body{
+                overflow-x: hidden;
                margin: 0;
                 min-height: 100vh;
                 background: linear-gradient(to bottom right, #ffe0e9, #ffc1cc);
             }
         
             *{
+                box-sizing: border-box;
                 text-decoration: none;
             }
            .navigationbar{
@@ -76,6 +80,46 @@
                 to { opacity: 1;}
             }
 
+            @media (max-width: 768px) {
+
+  /* Title container */
+  .title {
+    padding-top: 60px;
+    margin-top: 20px;
+  }
+
+  /* Main heading */
+  .title h1 {
+    position: static;          /* removes absolute positioning */
+    font-size: 64px;           /* scales nicely on phones */
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  /* Locket image */
+  .title img {
+    transform: none;           /* removes translate() */
+    width: 140px;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  /* Navigation bar */
+  .navigationbar {
+    padding: 12px 18px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;           /* allows links to wrap */
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 0.95em;
+    padding: 8px 14px;
+  }
+}
         </style>
     </head>
 
@@ -96,3 +140,4 @@
         </div>
 
     </body>
+
