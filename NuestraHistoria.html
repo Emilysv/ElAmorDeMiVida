@@ -1,0 +1,178 @@
+<html>
+    <head>
+         <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+         <title>
+            <!--Emily Vides - first personal project
+                Website for my boyfriend/Journal-->
+        </title>
+        <style type = "text/css">
+
+           
+            body{
+                position:relative;
+               margin: 0;
+                min-height: 100vh;
+                display: grid;
+                grid-template-rows: auto 1fr auto;
+                background: linear-gradient(to bottom right, #ffe0e9, #ffc1cc);
+            }
+         
+             .title{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: 15px;
+             
+            }
+            .title h1{
+              position: absolute;
+              z-index: 2;
+              font-size: 100px;
+              font-family:'Great Vibes', cursive;
+              color: #800;
+              text-align: center;
+              text-shadow: 2px 2px 8px rgba(117, 16, 16, 0.6);
+              padding-left: 25px;
+              padding-right: 25px;
+            }
+            .title img{
+                transform: translate(490px, 15px);
+                height: 200px;
+                width: 150px;
+                z-index: 1;
+            }
+            *{
+                text-decoration: none;
+            }
+           .navigationbar{
+              display:flex;
+              justify-content: center;
+              padding: 15px 30px;
+             background: rgba(255, 246, 247, 0.7);
+             border-radius: 40px;
+             width: fit-content;
+             margin: 30px auto;
+             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+              
+            }
+            .nav-links{
+                list-style: none;
+                display:flex;
+                gap: 20px;
+                padding: 0;
+                margin: 0;
+            }
+            .nav-links a{
+                color: #800;
+                font-size: 1em;
+                transition: color 0.5s ease, transform 0.3s ease;
+                padding: 10px 18px;
+                border-radius: 25px;
+            }
+            .nav-links a:hover{
+                background-color:rgba(230, 155, 189, 0.932);
+                transition: color 1s ease;
+            }
+            .footer{
+              text-align: center;
+              padding: 15px 0;
+            }
+           .footer img{
+            width: 250px;
+            animation: fadeIn 3s ease forwards infinite, fadeOut 3s ease-out infinite;
+           }
+            @keyframes fadeIn{
+                from {opacity: 0;}
+                to { opacity: 1;}
+            }
+            
+             @keyframes fadeOut{
+                from {opacity: 1;}
+                to { opacity: 0;}
+            }
+          .wordsearch-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 40px;
+}
+
+.wordsearch-img {
+  width: 350px;
+  height: auto;
+  flex-shrink: 0;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.wordsearch-text {
+  flex: 1;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2em;
+  font-weight: 400;   /* thicker text */
+  line-height: 1.7;
+  opacity: 0;
+  animation: fadeInText 3s ease forwards;
+  animation-delay: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.18);
+}
+@media (max-width: 768px) {
+  .wordsearch-section {
+    flex-direction: column;
+  }
+}
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+        </style>
+    </head>
+
+    <body>
+        <div class="title">
+        <h1> El Amor De Mi Vida </h1>
+        <img src="jaciel/Locket.png" alt="locket">
+        </div>
+
+       <nav class ="navigationbar" >
+            <ul class="nav-links">
+                <li><a href="Index.html"> Inicio </a></li>
+                <li><a href="NotiArimily.html"> Noti Arimily </a></li>
+                <li><a href="Galeria.html"> Galeria </a></li>
+                <li><a href="NuestraHistoria.html"> Nuestra historia </a></li>
+            </ul>
+        </div>
+       </nav>
+
+     <div class="wordsearch-section">
+  <img src="jaciel/wordsearch.png" alt="2 words" class="wordsearch-img">
+
+       <div class="wordsearch-text">
+        <p> Este proyecto es dedicado a mi novio Jaciel. Quién me a inspirado a unir mi pasión por la tecnología con nuestra historia de amor. Este es mi primer proyecto individual donde usé HTML, CSS, y JavaScript. Este proyecto requirió mucho aprendizaje en el proceso, constantemente buscando  tutoriales  y leyendo artículos.</p>
+        <p>Nunca pensé que mi gran amor fuera uno a distancia, y menos que estuviéramos 2,400 kilómetros de lejos. Al pesar de la distancia, nuestro amor a roto barreras. Aveces se me olvida que estamos tan lejos porque siempre lo tengo tan presente.</p>
+       <p>Jaciel, muchas gracias por todo el apoyo que siempre me das. Antes de conocerte por primera vez en el 2024 no me imaginaba que iba a tener tanto amor por ti. Nuestro amor me a inspirado a ser más creativa y encontrar nuevas formas de demostrarte lo mucho que te quiero y te aprecio. Espero que nuestra relación siga floreciendo y que nuestro futuro esté lleno de amor y alegría.</p>
+    </div>
+       </div>
+
+       <footer class="footer">
+        <img src="jaciel/Eleven.png" alt="heart">
+       </footer>
+      
+    </body>

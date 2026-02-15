@@ -1,0 +1,382 @@
+<html>
+    <head>
+         <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+        <title>
+            <!--Emily Vides - first personal project
+                Website for my boyfriend/Journal-->
+        </title>
+        <style type = "text/css">
+            body{
+               margin: 0;
+                min-height: 100vh;
+                background: linear-gradient(to bottom right, #ffe0e9, #ffc1cc);
+            }
+            .title{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: 15px;
+             
+            }
+            .title h1{
+              position: absolute;
+              z-index: 2;
+              font-size: 100px;
+              font-family:'Great Vibes', cursive;
+              color: #800;
+              text-align: center;
+              text-shadow: 2px 2px 8px rgba(117, 16, 16, 0.6);
+              padding-left: 25px;
+              padding-right: 25px;
+            }
+            .title img{
+                transform: translate(490px, 15px);
+                height: 200px;
+                width: 150px;
+                z-index: 1;
+                animation: float 5s ease-in-out infinite, fadeIn 10s ease forwards;
+            }
+            *{
+                text-decoration: none;
+            }
+           .navigationbar{
+              display:flex;
+              justify-content: center;
+              padding: 15px 30px;
+             background: rgba(255, 246, 247, 0.7);
+             border-radius: 40px;
+             width: fit-content;
+             margin: 30px auto;
+             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+              
+            }
+            .nav-links{
+                list-style: none;
+                display:flex;
+                gap: 20px;
+                padding: 0;
+                margin: 0;
+            }
+            .nav-links a{
+                color: #800;
+                font-size: 1em;
+                transition: color 0.5s ease, transform 0.3s ease;
+                padding: 10px 18px;
+                border-radius: 25px;
+            }
+            .nav-links a:hover{
+                background-color:rgba(230, 155, 189, 0.932);
+                transition: color 1s ease;
+            }
+
+       .gallery {
+  max-width: 1200px;
+  margin: 60px auto 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+
+.gallery-item {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s ease;
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  inset: 0;                      
+  background: rgba(.9,0,.8,.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity .3s ease;
+  z-index: 2;                    
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item h3 {
+  color: white;
+  font-size: 22px;
+  text-align: center;
+}
+
+
+            .gallery-item:hover .overlay {
+                opacity:1;
+            }
+
+            @media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+            .photo-strip {
+  margin-top:120px;
+  width: 100%;
+  overflow: hidden;
+  height: 220px;
+  padding-top: 55px; 
+  display: flow-root; 
+}
+
+.strip {
+  width: 223%;
+  height: 123%;
+  background-image: url("jaciel/photostrip.png");
+  background-repeat: repeat-x;
+  background-size: contain;
+  animation: glide 40s linear infinite;
+}
+
+.strip-wrapper {
+  position: relative;     /* creates positioning context */
+  width: 100%;
+  height: 180px;
+  overflow: visible;
+}
+
+.overlay-photo {
+  position:absolute;
+  top: 55%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  width: 650px;
+  z-index: 10;            /* ensures it sits on top */
+}
+
+@keyframes glide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+
+        </style>
+    </head>
+
+    <body>
+      <div class="Title">
+        <h1> El Amor De Mi Vida </h1>
+        <img src="jaciel/Locket.png" alt="locket">
+        </div>
+        
+      <nav class ="navigationbar" >
+            <ul class="nav-links">
+                <li><a href="Index.html"> Inicio </a></li>
+                <li><a href="NotiArimily.html"> Noti Arimily </a></li>
+                <li><a href="Galeria.html"> Galeria </a></li>
+                <li><a href="NuestraHistoria.html"> Nuestra historia </a></li>
+            </ul>
+        </div>
+       </nav>
+
+<div class="gallery">
+  <div class="gallery-item">
+    <img src="jaciel/J1.JPG" alt="beach outlook">
+    <div class="overlay">
+      <h3>Mayo 24, 2025</h3>
+    </div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="jaciel/Beach.JPG" alt="waves">
+    <div class="overlay">
+      <h3>Mayo 24, 2025</h3>
+    </div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="jaciel/JKart.JPG" alt="Kart">
+    <div class="overlay">
+      <h3>Mayo 27, 2025</h3>
+    </div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="jaciel/JCap.JPG" alt="Cap">
+    <div class="overlay">
+      <h3>Mayo 30, 2025</h3>
+    </div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="jaciel/JBday.JPG" alt="Bday">
+    <div class="overlay">
+      <h3>Mayo 26, 2025</h3>
+    </div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="jaciel/JCamo.JPG" alt="camo">
+    <div class="overlay">
+      <h3>Mayo 30, 2025</h3>
+    </div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="jaciel/dogs.jpeg" alt="dogs">
+    <div class="overlay">
+      <h3>Mayo 20, 2025</h3>
+    </div>
+  </div>
+
+
+     <div class="gallery-item">
+    <img src="jaciel/selfie.jpeg" alt="together">
+    <div class="overlay">
+      <h3>Mayo 28, 2025</h3>
+    </div>
+  </div>
+
+     <div class="gallery-item">
+    <img src="jaciel/tats.jpeg" alt="tattoos">
+    <div class="overlay">
+      <h3>Mayo 27, 2025</h3>
+       </div>
+  </div>
+
+       <div class="gallery-item">
+    <img src="jaciel/selfcare.jpeg" alt="masks">
+    <div class="overlay">
+      <h3>Mayo 29, 2025</h3>
+      </div>
+  </div>
+
+       <div class="gallery-item">
+    <img src="jaciel/salami.jpeg" alt="food">
+    <div class="overlay">
+      <h3>Mayo 25, 2025</h3>
+      </div>
+  </div>
+
+       <div class="gallery-item">
+    <img src="jaciel/curcio.jpeg" alt="restaurant">
+    <div class="overlay">
+      <h3>Mayo 25, 2025</h3>
+       </div>
+  </div>
+
+       <div class="gallery-item">
+    <img src="jaciel/anabel.jpeg" alt="polaroid">
+    <div class="overlay">
+      <h3>Mayo 24, 2025</h3>
+    </div>
+  </div>
+
+      <div class="gallery-item">
+    <img src="jaciel/beachselfie.jpeg" alt="beachy">
+    <div class="overlay">
+      <h3>Mayo 24, 2025</h3>
+   </div>
+  </div>
+
+   <div class="gallery-item">
+    <img src="jaciel/Alley.jpg" alt="alley">
+    <div class="overlay">
+      <h3>Mayo 24, 2025</h3>
+   </div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="jaciel/bdayfit.JPG" alt="outfit">
+    <div class="overlay">
+      <h3>Mayo 26, 2025</h3>
+   </div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="jaciel/zona.JPG" alt="zona colonial">
+    <div class="overlay">
+      <h3>september 24, 2024</h3>
+    </div>
+  </div>
+
+   <div class="gallery-item">
+    <img src="jaciel/starbucks.JPG" alt="starbucks">
+    <div class="overlay">
+      <h3>september 25, 2024</h3>
+    </div>
+  </div>
+
+   <div class="gallery-item">
+    <img src="jaciel/cueva.JPG" alt="cueva">
+    <div class="overlay">
+      <h3>september 25, 2024</h3>
+    </div>
+  </div>
+  
+   <div class="gallery-item">
+    <img src="jaciel/mirror.JPG" alt="mirror">
+    <div class="overlay">
+      <h3>september 26, 2024</h3>
+    </div>
+  </div>
+
+ <div class="gallery-item">
+    <img src="jaciel/zonaselfie.JPG" alt="Emily">
+    <div class="overlay">
+      <h3>september 26, 2024</h3>
+    </div>
+  </div>
+
+   <div class="gallery-item">
+    <img src="jaciel/1stselfie.JPG" alt="1stselfie">
+    <div class="overlay">
+      <h3>september 26, 2024</h3>
+    </div>
+  </div>
+
+   <div class="gallery-item">
+    <img src="jaciel/chocolates.JPG" alt="choco">
+    <div class="overlay">
+      <h3>september 26, 2024</h3>
+    </div>
+  </div>
+
+   <div class="gallery-item">
+    <img src="jaciel/airport.JPG" alt="airport">
+    <div class="overlay">
+      <h3>september 27, 2024</h3>
+    </div>
+  </div>
+
+</div>
+
+       <div class="photo-strip">
+        <div class="strip-wrapper">
+         <div class="strip"></div>
+         <img src="jaciel/overlay-photo.png" class="overlay-photo">
+        </div>
+       </div>
+       
+    </body>
