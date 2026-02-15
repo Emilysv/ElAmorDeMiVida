@@ -1,5 +1,7 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
          <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
         <title>
             <!--Emily Vides - first personal project
@@ -7,10 +9,14 @@
         </title>
         <style type = "text/css">
             body{
+                overflow-x: hidden;
                margin: 0;
                 min-height: 100vh;
                 background: linear-gradient(to bottom right, #ffe0e9, #ffc1cc);
             }
+            * {
+  box-sizing: border-box;
+}
             .title{
                 display:flex;
                 flex-direction: column;
@@ -180,7 +186,57 @@
     background-position: -100% 0;
   }
 }
+@media (max-width: 768px) {
 
+  /* Title */
+  .title h1 {
+    position: static;
+    font-size: 60px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .title img {
+    transform: none;
+    width: 140px;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  /* Navigation */
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  /* Gallery grid */
+  .gallery {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+    margin-top: 40px;
+  }
+
+  .gallery-item {
+    height: 260px;
+  }
+
+  /* Photo strip */
+  .photo-strip {
+    height: auto;
+    margin-top: 60px;
+  }
+
+  .strip {
+    width: 300%;
+  }
+
+  .overlay-photo {
+    width: 280px;
+    left: 50%;
+    top: 60%;
+  }
+}
         </style>
     </head>
 
@@ -381,6 +437,7 @@
        
 
     </body>
+
 
 
 
