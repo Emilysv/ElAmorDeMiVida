@@ -1,5 +1,7 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
          <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
@@ -11,6 +13,7 @@
 
            
             body{
+               overflow-x: hidden;
                 position:relative;
                margin: 0;
                 min-height: 100vh;
@@ -101,7 +104,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 80px auto;
-  padding: 0 20px;
+  padding: 0 5px;
 }
 
 .wordsearch-img {
@@ -114,7 +117,7 @@
 .wordsearch-text {
   flex: 1;
   font-family: 'Playfair Display', serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 400;   /* thicker text */
   line-height: 1.7;
   opacity: 0;
@@ -127,12 +130,64 @@
     text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.18);
     overflow-wrap: break-word;
   word-wrap: break-word;
+     max-width: 600px;
+  margin: 0 auto;
+  padding: 0 10px;
 
 }
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
+
+  /* Title */
+  .title h1 {
+    font-size: 60px;
+    position: static;
+    text-align: center;
+  }
+
+  .title img {
+    transform: none;
+    margin-top: 10px;
+    width: 120px;
+    height: auto;
+  }
+
+  /* Navigation */
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  /* Wordsearch section */
   .wordsearch-section {
     flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
   }
+
+  .wordsearch-img {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .wordsearch-text {
+    font-size: 1em;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  /* Letter image */
+  .letter img {
+    width: 90%;
+    height: auto;
+  }
+
+  /* Footer image */
+  .footer img {
+    width: 180px;
+  }
+
+
 }
 @keyframes fadeInText {
   from {
@@ -180,6 +235,7 @@
       
 
     </body>
+
 
 
 
