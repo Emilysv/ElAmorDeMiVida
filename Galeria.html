@@ -9,14 +9,14 @@
         </title>
         <style type = "text/css">
             body{
-                overflow-x: hidden;
+                  overflow-x: hidden;
                margin: 0;
                 min-height: 100vh;
                 background: linear-gradient(to bottom right, #ffe0e9, #ffc1cc);
             }
-            * {
-  box-sizing: border-box;
-}
+            *{
+                 box-sizing: border-box;
+            }
             .title{
                 display:flex;
                 flex-direction: column;
@@ -132,6 +132,51 @@
                 opacity:1;
             }
 
+            @media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+            .photo-strip {
+  margin-top:120px;
+  width: 100%;
+  overflow: hidden;
+  height: 220px;
+  padding-top: 55px; 
+  display: flow-root; 
+}
+
+.strip {
+  width: 223%;
+  height: 123%;
+  background-image: url("jaciel/photostrip.png");
+  background-repeat: repeat-x;
+  background-size: contain;
+  animation: glide 40s linear infinite;
+}
+
+.strip-wrapper {
+  position: relative;     /* creates positioning context */
+  width: 100%;
+  height: 180px;
+  overflow: visible;
+}
+
+.overlay-photo {
+  position:absolute;
+  top: 55%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  width: 650px;
+  z-index: 10;            /* ensures it sits on top */
+}
 
 @keyframes glide {
   from {
@@ -140,69 +185,6 @@
   to {
     background-position: -100% 0;
   }
-}
-@media (max-width: 768px) {
-
-  /* Title */
-  .title h1 {
-    position: static;
-    font-size: 60px;
-    text-align: center;
-    padding: 0 10px;
-  }
-
-  .title img {
-    transform: none;
-    width: 140px;
-    height: auto;
-    margin-top: 10px;
-  }
-
-  /* Navigation */
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-
-  /* Gallery grid */
-  .gallery {
-    grid-template-columns: 1fr;
-    padding: 0 15px;
-    margin-top: 40px;
-  }
-
-  .gallery-item {
-    height: 260px;
-  }
-  /* Bring the strip UP */
-  .photo-strip {
-    position: relative;
-    margin-top: 10px;      /* was larger before */
-    padding-bottom: 40px;  /* breathing room so it doesn't cut off */
-  }
-
-  /* Strip itself */
-  .strip {
-    width: 320%;           /* slightly wider = more presence */
-    height: auto;
-  }
-
-  /* Make overlay photo BIGGER */
-  .overlay-photo {
-    position: absolute;
-    width: 85%;
-    max-width: 380px;
-    height: auto;
-
-    left: 50%;
-    top: 45%;              /* moves it up with the strip */
-    transform: translate(-50%, -50%);
-
-    z-index: 3;
-  }
-
-
 }
         </style>
     </head>
@@ -404,6 +386,7 @@
        
 
     </body>
+
 
 
 
